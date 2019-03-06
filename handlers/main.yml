@@ -1,0 +1,6 @@
+# handlers file for ubuntu-1604-rserve
+---
+- name: reload rserve service
+  service:
+    name: rserve
+    state: reloaded

@@ -1,0 +1,11 @@
+# tasks file for rserve
+---
+- name: install
+  apt:
+    name: r-cran-rserve
+
+- name: configure
+  template:
+    src: etc/systemd/system/rserve.service.j2
+    dest: /etc/systemd/system/rserve.service
+  notify: reload rserve service

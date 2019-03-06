@@ -1,0 +1,17 @@
+[Unit]
+Description=Rserve
+
+[Service]
+TimeoutSec=10s
+Type=forking
+PIDFile=/var/run/rserve/rserve.pid
+
+RuntimeDirectory=rserve
+RuntimeDirectoryMode=750
+
+User=nobody
+Group=nobody
+ExecStart=/usr/bin/R CMD Rserve --quiet --vanilla --RS-pidfile /var/run/rserve/rserve.pid
+
+[Install]
+WantedBy=multi-user.target

@@ -9,8 +9,6 @@ PIDFile=/var/run/rserve/rserve.pid
 RuntimeDirectory=rserve
 RuntimeDirectoryMode=750
 
-User=nobody
-Group=nobody
 ExecStart=/usr/bin/R CMD Rserve --quiet --vanilla --RS-pidfile /var/run/rserve/rserve.pid
 
 [Install]

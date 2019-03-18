@@ -8,4 +8,5 @@
   template:
     src: etc/systemd/system/rserve.service.j2
     dest: /etc/systemd/system/rserve.service
-  notify: reload rserve service
+  notify: restart rserve
+
